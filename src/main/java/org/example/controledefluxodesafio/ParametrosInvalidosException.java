@@ -8,7 +8,7 @@ public class ParametrosInvalidosException extends Exception {
 
     static void checkParametros(int parametro1, int parametro2) throws ParametrosInvalidosException {
         if (parametro1 > parametro2) {
-            throw new ParametrosInvalidosException("ERROR: O primeiro número deve ser menor ou igual ao segundo número");
+            throw new ParametrosInvalidosException("ERROR: O primeiro número digitado deve ser menor que o segundo número digitado");
         }
     }
 }
