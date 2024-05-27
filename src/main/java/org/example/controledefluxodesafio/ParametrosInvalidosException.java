@@ -1,11 +1,14 @@
 package org.example.controledefluxodesafio;
 
 public class ParametrosInvalidosException extends Exception {
-    static String parametroInvalido(int num1, int num2) throws ParametrosInvalidosException{
-        if (num1 < num2)
-            throw new ParametrosInvalidosException();
 
-            return "O segundo parâmetro deve ser maior que o primeiro";
+    public ParametrosInvalidosException(String mensagem) {
+        super(mensagem);
+    }
 
+    static void checkParametros(int parametro1, int parametro2) throws ParametrosInvalidosException {
+        if (parametro1 > parametro2) {
+            throw new ParametrosInvalidosException("ERROR: O primeiro número deve ser menor ou igual ao segundo número");
+        }
     }
 }
